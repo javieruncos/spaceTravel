@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  background-image: url("../src/img/background-home-desktop.jpg");
+  /* background-image: url("../src/img/image-moon.webp"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.maninSection{
+  flex-grow: 1;
+}
+
+.NavbarSpace{
+  width: 75%;
+  background-color: rgba(7, 7, 7, 0.616);
+  height: 60px;
+  display: flex;
   align-items: center;
+ }
+
+
+.linkMenu:hover .link{
+ width: 100%;
+ transition: 0.2s ease;
+}
+
+.link{
+  height: 0.3px;
+  width: 0%;
+  background-color:white;
+}
+
+.spanMenu{
+  height: 1px;
+  width: 100%;
+  border: solid  rgba(128, 128, 128, 0.39);
+}
+
+.divLogo{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width:540px){
+  
+
+  .Toggle{
+    color: white;
+     background-color: aqua;
   }
-  to {
-    transform: rotate(360deg);
+  .spanMenu{
+    display: none;
+  }
+
+  .NavbarSpace{
+   width: 100%;
+   margin-top: 60px;
+
+  }
+
+  .App{
+    background-image: url("./img/background-home-tablet.jpg");
   }
 }
