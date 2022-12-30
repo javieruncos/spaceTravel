@@ -10,7 +10,7 @@ const Menu = ({fondo,setfondo,cambiarFondo,backgroundApp,backgroundDestinos}) =>
         <Container>
           <Navbar.Brand href="#home">
             <span className="ms-4">
-              {/* <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
                 <g fill="none" fill-rule="evenodd">
                   <circle cx="24" cy="24" r="24" fill="#FFF" />
                   <path
@@ -18,24 +18,26 @@ const Menu = ({fondo,setfondo,cambiarFondo,backgroundApp,backgroundDestinos}) =>
                     d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
                   />
                 </g>
-              </svg> */}
+              </svg>
             </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto   d-flex justify-content-around NavbarSpace">
+              <div>
               <Button as={Link} to={"/"}className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundApp)}>
               00 HOME
               </Button>
               <Button as={Link} to={"/destino"} className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundDestinos)}>
               01 DESTINATION
               </Button>
-              <Nav.Link href="#link" className="text-light ms-4">
+              <Button as={Link} to={"/destino"} className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundDestinos)}>
               02 CREW
-              </Nav.Link>
-              <Nav.Link href="#link" className="text-light ms-4">
+              </Button>
+              <Button as={Link} to={"/destino"} className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundDestinos)}>
               03 TECHNOLOGY
-              </Nav.Link>
+              </Button>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {  obtenerPlanetas } from "../helper/queries";
+import { obtenerPlanetas } from "../helper/queries";
 import Cards from "./Cards";
 import Destinos from "./Destinos";
-import { Row } from "react-bootstrap";
-
+import { Row, Col } from "react-bootstrap";
 
 const Destination = ({
   planeta,
@@ -23,13 +22,24 @@ const Destination = ({
   }, []);
 
   return (
-    <div className="container">
-      <div className="contenedorLinks">
+    <div className="container mb-5">
+      <div>
+      <Row>
+        <Col md={6}>
+        <div className="mt-5 text-light mb-5">
+        <h1>01 PICK YOUR DESTINATION</h1>
+      </div>
+        </Col>
+        <Col md={6}>
+        <div className="contenedorLinks">
         {arregloPlaneta.map((item) => (
           <Destinos item={item} key={item.id} obtenerP={obtenerP}></Destinos>
         ))}
       </div>
-      <Row>
+        </Col>
+      </Row>
+      </div>
+      <Row className="mt-1">
         <Cards
           planeta={planeta}
           planetasImg={planetasImg}

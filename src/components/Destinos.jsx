@@ -7,7 +7,7 @@ const Destinos = ({ item ,obtenerP}) => {
 
   return (
     <>
-      <button className="  ms-5 botonDestino" onClick={()=>obtenerP(item.id)}>{item.name}</button>
+      <button className="botonDestino" onClick={()=>obtenerP(item.id)}>{item.name}</button>
     </>
   );
 };
