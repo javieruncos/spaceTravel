@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { obtenerId, obtenerPlanetas } from "../helper/queries";
+import {  obtenerPlanetas } from "../helper/queries";
 import Cards from "./Cards";
 import Destinos from "./Destinos";
 import { Row } from "react-bootstrap";
 
-const Destination = ({ planeta, setPlaneta, obtenerP,planetasImg,setplanetasImg }) => {
+
+const Destination = ({
+  planeta,
+  setPlaneta,
+  obtenerP,
+  planetasImg,
+  setplanetasImg,
+}) => {
   const [arregloPlaneta, setArregloPlaneta] = useState([]);
 
   useEffect(() => {
@@ -24,7 +30,11 @@ const Destination = ({ planeta, setPlaneta, obtenerP,planetasImg,setplanetasImg 
         ))}
       </div>
       <Row>
-        <Cards planeta={planeta} planetasImg={planetasImg} setplanetasImg={setplanetasImg}></Cards>
+        <Cards
+          planeta={planeta}
+          planetasImg={planetasImg}
+          setplanetasImg={setplanetasImg}
+        ></Cards>
       </Row>
     </div>
   );

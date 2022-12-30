@@ -1,9 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import Cards from "./Cards";
-import { obtenerId, obtenerPlanetas } from "../helper/queries";
-import Planeta from "./Planeta";
+
 
 
 const Destinos = ({ item ,obtenerP}) => {

@@ -1,8 +1,7 @@
 
 
 .App{
-  background-image: url("../src/img/background-home-desktop.jpg");
-  /* background-image: url("../src/img/image-moon.webp"); */
+  /* background-image: url("../src/img/background-home-desktop.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -10,7 +9,6 @@
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 .maninSection{
   flex-grow: 1;

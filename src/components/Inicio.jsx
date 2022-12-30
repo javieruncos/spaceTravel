@@ -27,4 +27,4 @@ const Inicio = () => {
 };
 
 export default Inicio;
-<h1>hola space</h1>;
+

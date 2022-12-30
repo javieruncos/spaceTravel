@@ -1,8 +1,9 @@
 import React from "react";
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+
+const Menu = ({fondo,setfondo,cambiarFondo,backgroundApp,backgroundDestinos}) => {
   return (
     <div>
       <Navbar expand="lg">
@@ -23,12 +24,12 @@ const Menu = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto   d-flex justify-content-around NavbarSpace">
-              <Nav.Link as={Link} to={"/"}className="text-light ms-4">
+              <Button as={Link} to={"/"}className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundApp)}>
               00 HOME
-              </Nav.Link>
-              <Nav.Link as={Link} to={"/destino"} className="text-light ms-4">
+              </Button>
+              <Button as={Link} to={"/destino"} className="btn btn-outline-dark text-light ms-4 btnNav" onClick={()=>cambiarFondo(backgroundDestinos)}>
               01 DESTINATION
-              </Nav.Link>
+              </Button>
               <Nav.Link href="#link" className="text-light ms-4">
               02 CREW
               </Nav.Link>

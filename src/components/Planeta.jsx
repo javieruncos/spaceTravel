@@ -1,6 +1,5 @@
 import React from "react";
-import { Row, Col, Nav, Navbar, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Row } from "react-bootstrap";
 import Cards from "./Cards";
 
 const Planeta = ({ arregloPlaneta }) => {
