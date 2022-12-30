@@ -1,25 +1,33 @@
-import React, { useEffect ,useState} from 'react';
-import { obtenerPlanetas } from '../helper/queries';
-import Planeta from './Planeta';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { obtenerId, obtenerPlanetas } from "../helper/queries";
+import Cards from "./Cards";
+import Destinos from "./Destinos";
+import { Row } from "react-bootstrap";
 
-const Destination = () => {
-   const [arregloPlaneta, setArregloPlaneta] = useState([])
+const Destination = ({ planeta, setPlaneta, obtenerP,planetasImg,setplanetasImg }) => {
+  const [arregloPlaneta, setArregloPlaneta] = useState([]);
 
-   useEffect(()=>{
-     obtenerPlanetas().then((respuesta)=>{
-     console.log(respuesta)
-     setArregloPlaneta(respuesta)
-     })
-   },[])
+  useEffect(() => {
+    obtenerPlanetas().then((respuesta) => {
+      setArregloPlaneta(respuesta);
+      setPlaneta(respuesta[0]);
+      console.log(respuesta);
+    });
+  }, []);
 
-    return (
-        <div>
-            <div>
-
-            </div>
-            <Planeta arregloPlaneta={arregloPlaneta}></Planeta>
-        </div>
-    );
+  return (
+    <div className="container">
+      <div className="contenedorLinks">
+        {arregloPlaneta.map((item) => (
+          <Destinos item={item} key={item.id} obtenerP={obtenerP}></Destinos>
+        ))}
+      </div>
+      <Row>
+        <Cards planeta={planeta} planetasImg={planetasImg} setplanetasImg={setplanetasImg}></Cards>
+      </Row>
+    </div>
+  );
 };
 
 export default Destination;
