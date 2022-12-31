@@ -41,7 +41,7 @@ const Cards = ({ planeta, setplanetasImg, planetasImg }) => {
             <p className="display-6">{planeta.distance}</p>
           </div>
           <div>
-          <h4>EST. TRAVEL TIME</h4>
+          <h4> TRAVEL TIME</h4>
           <p className="display-6">{planeta.travel}</p>
           </div>
         </div>
