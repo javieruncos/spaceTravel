@@ -1,28 +1,32 @@
 import React, { useEffect } from "react";
-import { Carousel, Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { useState } from "react";
-import personCrew from "../assets/crew/image-anousheh-ansari.png";
 import { obtenerCrew, obtenerIdCrew } from "../helper/queries";
 import Btncrew from "./Btncrew";
 
 const Crew = () => {
-  const [person, setPerson] = useState({});
   const [arregloCrew, setArregloCrew] = useState([]);
+  const [person, setPerson] = useState({});
+  const[img,setImg] =useState("douglas")
+ 
+  useEffect(() => {
+    obtenerCrew().then((respuesta) => {
+      setArregloCrew(respuesta);
+      setPerson(respuesta[0])
+    });
+  }, []);
+
 
   const personID = (id) => {
     obtenerIdCrew(id).then((respuesta) => {
       if (respuesta.status === 200) {
         console.log(respuesta.dato);
         setPerson(respuesta.dato);
+        setImg(respuesta.dato.images)
       }
     });
   };
 
-  useEffect(() => {
-    obtenerCrew().then((respuesta) => {
-      setArregloCrew(respuesta);
-    });
-  }, []);
 
   return (
     <div className="container">
@@ -40,7 +44,7 @@ const Crew = () => {
             </div>
             <div className="mt-4">
            {
-            arregloCrew.map((item)=><Btncrew item={item} personID={personID}></Btncrew>)
+            arregloCrew.map((item,indice)=><Btncrew item={item} personID={personID} key={indice}></Btncrew>)
            }
 
            </div>
@@ -48,7 +52,7 @@ const Crew = () => {
           <Col md={6}>
             <div  style={{ height: 550 }}>
               <img
-                src={personCrew}
+                src={require(`../img/image-${img}.png`)}
                 alt=""
                 className="w-100"
                 style={{ height: 550 }}
