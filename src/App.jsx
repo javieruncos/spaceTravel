@@ -8,6 +8,8 @@ import Destination from "./components/Destination";
 import { obtenerId } from "./helper/queries";
 import backgroundApp from "./img/background-home-desktop.jpg";
 import backgroundDestinos from "./img/background-destination-desktop.jpg";
+import backgroundCrew from "./assets/crew/background-crew-desktop.jpg"
+import Crew from "./components/Crew";
 
 function App() {
   const [planeta, setPlaneta] = useState({});
@@ -37,6 +39,7 @@ function App() {
           cambiarFondo={cambiarFondo}
           backgroundApp={backgroundApp}
           backgroundDestinos={backgroundDestinos}
+          backgroundCrew={backgroundCrew}
         ></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -52,6 +55,13 @@ function App() {
                 setfondo={setfondo}
                 cambiarFondo={cambiarFondo}
               ></Destination>
+            }
+          ></Route>
+          <Route
+            exact
+            path="/crew"
+            element={
+              <Crew></Crew>
             }
           ></Route>
         </Routes>

@@ -8,6 +8,7 @@ const Menu = ({
   cambiarFondo,
   backgroundApp,
   backgroundDestinos,
+  backgroundCrew
 }) => {
   return (
     <div>
@@ -35,15 +36,15 @@ const Menu = ({
               </Button>
               <Button
                 as={Link}
-                to={"/destino"}
+                to={"/crew"}
                 className="btn btn-outline-dark text-light  btnNav"
-                onClick={() => cambiarFondo(backgroundDestinos)}
+                onClick={() => cambiarFondo(backgroundCrew)}
               >
                 03 CREW
               </Button>
               <Button
                 as={Link}
-                to={"/destino"}
+                to={"/crew"}
                 className="btn btn-outline-dark text-light  btnNav"
                 onClick={() => cambiarFondo(backgroundDestinos)}
               >
