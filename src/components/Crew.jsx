@@ -4,36 +4,39 @@ import { useState } from "react";
 import { obtenerCrew, obtenerIdCrew } from "../helper/queries";
 import Btncrew from "./Btncrew";
 
+
 const Crew = () => {
   const [arregloCrew, setArregloCrew] = useState([]);
   const [person, setPerson] = useState({});
-  const[img,setImg] =useState("douglas")
+  const [img, setImg] = useState("douglas");
+  
+
  
+
   useEffect(() => {
     obtenerCrew().then((respuesta) => {
       setArregloCrew(respuesta);
-      setPerson(respuesta[0])
+      setPerson(respuesta[0]);
     });
   }, []);
 
-
+  
   const personID = (id) => {
     obtenerIdCrew(id).then((respuesta) => {
       if (respuesta.status === 200) {
         console.log(respuesta.dato);
         setPerson(respuesta.dato);
-        setImg(respuesta.dato.images)
+        setImg(respuesta.dato.images);
       }
     });
   };
-
 
   return (
     <div className="container">
       <div className="mt-5 text-light mb-5">
         <h1>02 MEET YOUR CREW</h1>
       </div>
-
+    
       <div>
         <Row>
           <Col md={6}>

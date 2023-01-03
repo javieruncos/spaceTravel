@@ -14,6 +14,7 @@ import Crew from "./components/Crew";
 function App() {
   const [planeta, setPlaneta] = useState({});
   const [fondo, setfondo] = useState(backgroundApp);
+  const [imgPlaneta, setImgPlaneta] = useState("moon")
   
 
   const cambiarFondo = (background) => {
@@ -25,6 +26,7 @@ function App() {
     obtenerId(id).then((respuesta) => {
       if (respuesta.status === 200) {
         setPlaneta(respuesta.dato);
+        setImgPlaneta(respuesta.dato.images)
         console.log(respuesta.dato);
       }
     });
@@ -54,6 +56,7 @@ function App() {
                 fondo={fondo}
                 setfondo={setfondo}
                 cambiarFondo={cambiarFondo}
+                imgPlaneta={imgPlaneta}
               ></Destination>
             }
           ></Route>

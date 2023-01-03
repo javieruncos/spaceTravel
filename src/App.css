@@ -110,7 +110,18 @@
   margin-top: -62px;
 }
 
+.botonDestino2{
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(37, 36, 36);
+  color:white;
+  width: 50px;
+}
 
+.botonDestino2:hover{
+  scale: 1.1;
+  background-color: grey;
+}
 
 @media all and (max-width:480px){
   .navbarSpace{

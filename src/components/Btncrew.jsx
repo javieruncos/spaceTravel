@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const Btncrew = ({item ,personID}) => {
     return (
         <>
-            <Button onClick={()=>personID(item.id)} className="mx-2 botonDestino">{item.id}</Button>
+            <button onClick={()=>personID(item.id)} className="mx-2 botonDestino2">{item.id}</button>
         </>
     );
 };

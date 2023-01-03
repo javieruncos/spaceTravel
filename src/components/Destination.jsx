@@ -10,6 +10,7 @@ const Destination = ({
   obtenerP,
   planetasImg,
   setplanetasImg,
+  imgPlaneta
 }) => {
   const [arregloPlaneta, setArregloPlaneta] = useState([]);
 
@@ -48,6 +49,7 @@ const Destination = ({
           planeta={planeta}
           planetasImg={planetasImg}
           setplanetasImg={setplanetasImg}
+          imgPlaneta={imgPlaneta}
         ></Cards>
       </Row>
     </div>
