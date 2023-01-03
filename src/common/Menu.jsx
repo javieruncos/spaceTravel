@@ -3,8 +3,6 @@ import { Nav, Navbar, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Menu = ({
-  fondo,
-  setfondo,
   cambiarFondo,
   backgroundApp,
   backgroundDestinos,

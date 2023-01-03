@@ -38,8 +38,6 @@ function App() {
     <div className="App" style={{ backgroundImage: `url(${fondo})` }}>
       <BrowserRouter>
         <Menu
-          fondo={fondo}
-          setfondo={setfondo}
           cambiarFondo={cambiarFondo}
           backgroundApp={backgroundApp}
           backgroundDestinos={backgroundDestinos}
