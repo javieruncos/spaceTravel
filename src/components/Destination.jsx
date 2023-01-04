@@ -27,7 +27,7 @@ const Destination = ({
       <div>
         <Row className="rowDestinos">
           <Col md={6}>
-            <div className="mt-5 text-light mb-5">
+            <div className="mt-5 text-light mb-5 divCrew">
               <h1>01 PICK YOUR DESTINATION</h1>
             </div>
           </Col>
