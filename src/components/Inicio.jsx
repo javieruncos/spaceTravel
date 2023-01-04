@@ -7,7 +7,7 @@ const Inicio = () => {
   return (
     <Container>
       <Row className="mt-5 contenedorInicio">
-        <Col md={6}>
+        <Col className="col-12 col-md-12 col-lg-6">
           <div className="text-light tituloPrincipal">
             <h2 className="text-center space2">SO,YOU WANT TO TRAVEL TO</h2>
             <h1 className="text-center space">SPACE</h1>

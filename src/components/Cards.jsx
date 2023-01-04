@@ -17,7 +17,7 @@ const Cards = ({ planeta, imgPlaneta }) => {
         <hr className="text-light" />
         <div className="cardKM">
           <div>
-            <h4>AVG. DISTANCE</h4>
+            <h4> DISTANCE</h4>
             <p className="display-6">{planeta.distance}</p>
           </div>
           <div>

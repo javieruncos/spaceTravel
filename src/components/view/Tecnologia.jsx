@@ -35,14 +35,14 @@ const Tecnologia = () => {
       </div>
       <div>
         <Row>
-             <Col md={3}>
-               <div className="contenedorTec">
+             <Col className="col-12 col-md-12 col-lg-3 boxbtn">
+               <div className="contenedorTec  ">
                 {
                   arregloTec.map((item,indice)=><BtnTechnology item={item} key={indice} obtenerVehiculos={obtenerVehiculos}></BtnTechnology>)
                 }
                </div>
              </Col>
-             <Col md={5}>
+             <Col className="col-12 col-md-6 col-lg-5">
               <div className="text-light contenedorTec ">
                 <div>
                <h4>THE TECHNOLOGY</h4>
@@ -51,7 +51,7 @@ const Tecnologia = () => {
                 </div>
               </div>
              </Col>
-             <Col md={4}>
+             <Col className="col-12 col-md-6 col-lg-4">
                 <div className="contenedorVehicle">
                     <img src={require(`../../img/image-${imgVehiculo}.jpg`)} alt="vehiculo" className="w-100" />
                 </div>

@@ -45,7 +45,7 @@ const Crew = () => {
               <h3 className="display-3">{person.name}</h3>
               <p className="mt-5">{person.bio}</p>
             </div>
-            <div className="mt-4">
+            <div className="my-5 boxBtncrew">
            {
             arregloCrew.map((item,indice)=><Btncrew item={item} personID={personID} key={indice}></Btncrew>)
            }
