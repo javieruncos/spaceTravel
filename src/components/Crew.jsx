@@ -33,7 +33,7 @@ const Crew = () => {
 
   return (
     <div className="container">
-      <div className="mt-5 text-light mb-5 ">
+      <div className="mt-5 text-light mb-5 divCrew">
         <h1>02 MEET YOUR CREW</h1>
       </div>
     

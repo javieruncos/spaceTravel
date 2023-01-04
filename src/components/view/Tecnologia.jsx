@@ -30,7 +30,7 @@ const Tecnologia = () => {
 
   return (
     <div className="container-fluid ">
-      <div className="mt-5 text-light mb-2 container">
+      <div className="mt-5 text-light mb-2 container divCrew">
         <h1>03 SPACE LAUNCH 101</h1>
       </div>
       <div>
@@ -44,7 +44,7 @@ const Tecnologia = () => {
              </Col>
              <Col className="col-12 col-md-6 col-lg-5">
               <div className="text-light contenedorTec ">
-                <div>
+              <div>
                <h4>THE TECHNOLOGY</h4>
                <h2 className="display-2">{vehiculos.name}</h2>
                <p>{vehiculos.description}</p>
